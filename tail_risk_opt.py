@@ -460,5 +460,4 @@ if __name__ == "__main__":
 	return_data.columns = ["CSI", "CBA"]
 
 	port = allocation(fulldata, return_data, 120, 20, iteration=2000, target_x = 0.01, target_y = -0.01).dropna()
-	port = port.dropna()
 	eva_port = evaluation(port, 20, basic_info=True, net_plot=True, allocation_plot=True)
